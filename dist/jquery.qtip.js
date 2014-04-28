@@ -1,12 +1,12 @@
 /*
- * qTip2 - Pretty powerful tooltips - v2.2.0-39-
+ * qTip2 - Pretty powerful tooltips - v2.2.0-41-
  * http://qtip2.com
  *
  * Copyright (c) 2014 
  * Released under the MIT, GPL licenses
  * http://jquery.org/license
  *
- * Date: Mon Mar 3 2014 05:44 GMT+0100+0100
+ * Date: Mon Apr 28 2014 11:48 GMT+0200+0200
  * Plugins: tips viewport
  * Styles: core basic css3
  */
@@ -354,7 +354,7 @@ function sanitizeOptions(opts) {
 		}
 
 		if('title' in content) {
-			if(!invalidOpt(content.title)) {
+			if($.isPlainObject(content.title)) {
 				content.button = content.title.button;
 				content.title = content.title.text;
 			}
@@ -1898,7 +1898,7 @@ if(!$.ui) {
 	};
 }
 ;// qTip version
-QTIP.version = '2.2.0-39-';
+QTIP.version = '2.2.0-41-';
 
 // Base ID for all qTips
 QTIP.nextid = 0;
